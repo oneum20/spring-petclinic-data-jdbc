@@ -16,3 +16,4 @@ _site/
 .gradle
 build
 conf.d
+logs
