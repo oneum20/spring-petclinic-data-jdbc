@@ -4,9 +4,9 @@ LABEL maintainer="github.com/oneum20"
 ARG USER=app
 ARG GROUP=app
 ARG WORKDIR=/app
-ARG LOGDIR=$WORKDIR/log
+ARG LOGDIR=$WORKDIR/logs
 
-RUN addgroup -S $GROUP &&\
+RUN addgroup -g 998 $GROUP &&\
     adduser --system -G $GROUP -u 999 $USER &&\
     mkdir $WORKDIR $LOGDIR &&\
     chown -R $USER:$GROUP $WORKDIR
