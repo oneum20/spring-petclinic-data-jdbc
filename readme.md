@@ -14,7 +14,6 @@
     # 도커이미지 빌드
     $ docker build -t <tag-name> .
     ```
-* k8s 
 
 ## gradle을 사용하여 어플리케이션과 도커이미지를 빌드
 ### 어플리케이션을 빌드
@@ -90,7 +89,7 @@
     ```
 
 ## 종료 시 30초 이내에 프로세스가 종료되지 않으면 SIGKILL로 강제 종료
-* Pods의 종료 프로세스에서 SIGTERM이 Pods로 전달되면 설정 된 `terminationGracePeriodSeconds` 만큼 대기하다가 SIGKILL 신호를 전송 함.
+* Pods의 종료 프로세스에서 SIGTERM이 Pods로 전달되면 설정 된 `terminationGracePeriodSeconds` 이내로 종료되지 않으면, SIGKILL 신호를 전송 함.
     * `terminationGracePeriodSeconds`의 기본값은 30
 ## 배포 시 scale-in, out 상황에서 유실되는 트래픽은 없어야 함
 * Pods의 livenessProbe, readinessProbe를 체크하여 트래픽 처리 준비가 되어있지 않으면, 트래픽이 차단 됨
