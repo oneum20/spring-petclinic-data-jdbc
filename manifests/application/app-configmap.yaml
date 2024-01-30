@@ -6,4 +6,4 @@ metadata:
     app: app
 data:
   logging-file-name: ./logs/spring-${HOSTNAME}.log
-  spring-datasource-url: jdbc:mysql://mysql.default.svc.cluster.local/petclinic
+  spring-datasource-url: jdbc:mysql://mysql-0.mysql.default.svc.cluster.local/petclinic
